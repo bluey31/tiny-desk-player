@@ -11,15 +11,20 @@ def play(artist: str):
     If the file cannot be found, the user will be asked if they wish to download it and then play it once the download is finished.
     """
 
-    filename = artist + ".mp4"
+    filename = "tinydesks/" + artist + ".mp4"
     
     if os.path.isfile(filename):
         audio = AudioSegment.from_file(filename, format="mp4")
         print(f"Playing Tiny Desk ...")
         return play_audio(audio)
     else:
-        choice = input("Tiny Desk Performance not found, do you want to download it? (y/n): ")
-        if choice.lower() == "y":
-            download(artist)
+        dl_choice = input("Tiny Desk Performance not found, do you want to download it? (y/n): ")
+        if dl_choice.lower() == "y":
+            _ = download(artist)
+            play_choice = input("Downloaded Tiny Desk, do you want to play it now? (y/n): ")
+            if play_choice.lower() == "y":
+                return play(artist)
+            else:
+                print("Playback cancelled.")
         else:
             print("Playback cancelled.")

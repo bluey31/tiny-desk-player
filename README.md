@@ -23,13 +23,13 @@ pip install -r requirements.txt
 Play the Harry Styles Tiny Desk:
 
 ```python
-python3 tdp.py play "Harry Styles"
+python3 tiny_desk_player.py play "Harry Styles"
 ```
 
 Download the Men I Trust Tiny Desk for later playback:
 
 ```python
-python3 tdp.py download "Men I Trust"
+python3 tiny_desk_player.py download "Men I Trust"
 ```
 
 ##  TODO
@@ -37,4 +37,4 @@ python3 tdp.py download "Men I Trust"
 - [ ] Make what is shown during playback more interesting (dancing table?) 
 - [ ] Make TUI for `download` more interesting (progress bar etc) 
 - [ ] Add a "live" mode that plays back the stream, without the need to download it first
-- [ ] Proper logging and exception handling
+- [ ] Better logging and aggregate exception handling within `download` and `play`
