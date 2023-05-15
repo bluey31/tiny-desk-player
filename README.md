@@ -23,13 +23,13 @@ pip install -r requirements.txt
 Play the Harry Styles Tiny Desk:
 
 ```python
-python3 tiny-desk-player.py play "Harry Styles"
+python3 tdp.py play "Harry Styles"
 ```
 
 Download the Men I Trust Tiny Desk for later playback:
 
 ```python
-python3 tiny-desk-player.py download "Men I Trust"
+python3 tdp.py download "Men I Trust"
 ```
 
 ##  TODO
